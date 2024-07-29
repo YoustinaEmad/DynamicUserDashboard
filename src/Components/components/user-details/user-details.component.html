@@ -1,0 +1,6 @@
+<div *ngIf="user$ | async as user" class="user-details">
+    <img [src]="user.avatar" alt="{{ user.first_name }}" class="user-avatar">
+    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+    <button (click)="goBack()" class="back-button">Back</button>
+  </div>
+  

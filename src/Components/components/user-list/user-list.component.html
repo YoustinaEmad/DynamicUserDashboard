@@ -1,0 +1,9 @@
+<div class="user-list">
+  <div class="user-card-container" *ngFor="let user of users$ | async" (click)="selectUser(user.id)">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+  <div class="pagination">
+    <button class="btn prev" (click)="prevPage()">Previous</button>
+    <button class="btn next" (click)="nextPage()">Next</button>
+  </div>
+</div>
